@@ -174,6 +174,13 @@ public class CpgMultiMetricsStats {
 					String wgsBamFile = arguments.get(3);
 					String detailFile = arguments.get(4);
 
+					System.out.println("refFile: " + refFile);
+					System.out.println("cpgListFile: " + cpgListFile);
+					System.out.println("allCpgFile: " + allCpgFile);
+					System.out.println("wgsBamFile: " + wgsBamFile);
+					System.out.println("detailFile: " + detailFile);
+
+
 					initiate();			
 					
 					//initiate different kinds of reader
@@ -594,6 +601,10 @@ public class CpgMultiMetricsStats {
 							int end = cpg.getEnd();
 							int fragMostLeft = start+1;
 							int fragMostRight = end;
+
+							// bamChr should not include chr, just the chromosome number
+							// Remove chr preamble
+							bamChr = bamChr.replace("chr", "");
 							
 							SAMRecordIterator wgsIt = wgsReader.queryOverlapping(bamChr,start+1,end);//start 1-based, inclusive start of interval of interest. Zero implies start of the reference sequence.
 							HashMap<String, SAMRecord> countedReads = new HashMap<String, SAMRecord>();
