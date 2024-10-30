@@ -2,3 +2,12 @@
 .DS_Store
 target
 
+BH01_chr22_sorted.bam
+BH01_chr22_sorted.bam.bai
+CG_motif_chr22.bedgraph
+CG_motif.bedgraph
+CpgMultiMetricsStats.hg19.details.bed.gz
+hg19.2bit
+hg19.fa.gz
+wgbs_buffyCoat_jensen2015GB.methy.hg19.bw
+wgEncodeDukeMapabilityRegionsExcludable_wgEncodeDacMapabilityConsensusExcludable.hg19.bed
